@@ -52,81 +52,90 @@ const Registro = () => {
                 </nav>
 
                 <div className="container">
-                    <div className="form-container">
-                        <h2 className="h2r">Regístrate</h2>
-                        <form onSubmit={handleSubmit}>
-                            <div className="mb-3">
-                                <label htmlFor="document-type" className="form-label">Tipo de Documento</label>
-                                <select className="tp form-selectt" name="document-type" onChange={handleChange}>
-                                    <option value="">Seleccione una opción</option>
-                                    <option value="cc">Cédula de Ciudadania</option>
-                                    <option value="ce">Cédula de Extranjeria</option>
-                                </select>
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="document-number" className="form-label">Número de Documento</label>
-                                <input
-                                    type="number"
-                                    name="numdoc"
-                                    className="form-controll"
-                                    id="document-number"
-                                    required
-                                    onChange={handleChange}
-                                />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="first-name" className="form-label">Nombres</label>
-                                <input
-                                    type="text"
-                                    name="firstName"
-                                    className="form-controll"
-                                    id="first-name"
-                                    required
-                                    onChange={handleChange}
-                                />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="last-name" className="form-label">Apellidos</label>
-                                <input
-                                    type="text"
-                                    name="lastName"
-                                    className="form-controll"
-                                    id="last-name"
-                                    required
-                                    onChange={handleChange}
-                                />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="email" className="form-label">Correo</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    className="form-controll"
-                                    id="email"
-                                    required
-                                    onChange={handleChange}
-                                />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="password" className="form-label">Contraseña</label>
-                                <input
-                                    type="password"
-                                    name="password"
-                                    className="form-controll"
-                                    id="password"
-                                    required
-                                    onChange={handleChange}
-                                />
-                            </div>
-                            <button type="submit" className="btn btn-success submit-btn" disabled={isSubmitted}>
-                                {isSubmitted ? 'Enviando...' : 'Registrarme'}
-                            </button>
-                        </form>
+  <div className="form-container">
+    <h2 className="h2r">Regístrate</h2>
+    <form onSubmit={handleSubmit}>
+      <div className="row">
+        <div className="col-md-6 mb-3">
+          <label htmlFor="document-type" className="form-label">Tipo de Documento</label>
+          <select className="tp form-selectt" name="document-type" onChange={handleChange}>
+            <option value="">Seleccione una opción</option>
+            <option value="cc">Cédula de Ciudadania</option>
+            <option value="ce">Cédula de Extranjeria</option>
+          </select>
+        </div>
+        <div className="col-md-6 mb-3">
+          <label htmlFor="document-number" className="form-label">Número de Documento</label>
+          <input
+            type="number"
+            name="numdoc"
+            className="form-controll"
+            id="document-number"
+            required
+            onChange={handleChange}
+          />
+        </div>
+        <div className="col-md-6 mb-3">
+          <label htmlFor="first-name" className="form-label">Nombres</label>
+          <input
+            type="text"
+            name="firstName"
+            className="form-controll"
+            id="first-name"
+            required
+            onChange={handleChange}
+          />
+        </div>
+        <div className="col-md-6 mb-3">
+          <label htmlFor="last-name" className="form-label">Apellidos</label>
+          <input
+            type="text"
+            name="lastName"
+            className="form-controll"
+            id="last-name"
+            required
+            onChange={handleChange}
+          />
+        </div>
+        <div className="col-md-6 mb-3">
+          <label htmlFor="email" className="form-label">Correo</label>
+          <input
+            type="email"
+            name="email"
+            className="form-controll"
+            id="email"
+            required
+            onChange={handleChange}
+          />
+        </div>
+        <div className="col-md-6 mb-3">
+          <label htmlFor="password" className="form-label">Contraseña</label>
+          <input
+            type="password"
+            name="password"
+            className="form-controll"
+            id="password"
+            required
+            onChange={handleChange}
+          />
+        </div>
+      </div>
 
-                        <br />
-                        <p className="p">¿Ya está registrado? <Link to="/inicioSesion">Iniciar sesión</Link></p>
-                    </div>
-                </div>
+      <div className="row mt-4">
+      <div className="col-12 text-center">
+        <button type="submit" className="btn btn-success submit-btn"disabled={isSubmitted}>
+            {isSubmitted ? 'Enviando...' : 'Registrarme'}
+        </button>
+      </div>
+    </div>
+
+    </form>
+
+    <br />
+    <p className="p">¿Ya está registrado? <Link to="/inicioSesion">Iniciar sesión</Link></p>
+  </div>
+</div>
+
             </div>
 
             {/* Modal */}
@@ -151,5 +160,3 @@ const Registro = () => {
 }
 
 export default Registro;
-
-
