@@ -51,7 +51,13 @@ body {
   
 }
 
-.iniciars, .reg {
+.reg{
+  color: #4f8d38;
+  border-radius: 25px;
+  width: 410px;
+}
+
+.iniciars {
   background-color: #4f8d38;
   color: white;
   border-radius: 25px;
