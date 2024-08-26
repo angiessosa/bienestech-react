@@ -24,14 +24,17 @@ const Index = () => {
                         </div>
                         <div className="text-and-buttons">
                             <div className="botones">
-                            <Link to="/registro">
-                                <button className="btn btn-lg btn-outline-success btn-block reg" type="button" Link to="./registro">Registrarse</button>
-                            </Link>
-                                <br></br>
-                                <br></br>
+
                             <Link to="/inicioSesion">
                                 <button className="btn btn-lg btn-outline-success btn-block iniciars" type="button">Iniciar Sesión</button>
                             </Link>
+                            <br></br>
+                            <br></br>
+                            <Link to="/registro">
+                                <button className="btn btn-lg btn-outline-success btn-block reg" type="button" Link to="./registro">Registrarse</button>
+                            </Link>
+                            
+                            
                             </div>
                         </div>
                     </div>
